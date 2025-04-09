@@ -86,7 +86,7 @@ export default function CampaignCard({
       </div>
 
       {/* 하단 텍스트 영역 */}
-      <div className="absolute bottom-0 left-0 p-[28px] flex justify-between w-full bg-gradient-to-t from-[#222222]">
+      <div className="absolute bottom-0 left-0 p-[28px] flex gap-10 justify-between w-full bg-gradient-to-t from-[#222222]">
         <div className="flex flex-col justify-end">
           <span className="font-bold text-white text-lg mb-[10px]">{tag}</span>
           <span className="font-medium text-white text-sm">{content}</span>
