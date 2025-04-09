@@ -73,7 +73,7 @@ export default function GNB() {
             />
           ) : (
             <Link
-              to={"/login"}
+              to={"/signin"}
               className="bg-white w-[81px] h-[38px] flex justify-center items-center rounded-[100px] cursor-pointer"
             >
               <span className="text-[#1B1B1B] font-medium text-sm">로그인</span>
