@@ -1,0 +1,71 @@
+/* slick-dots 컨테이너: 왼쪽 정렬, 간격 6px */
+.slick-dots {
+  display: flex !important;
+  justify-content: flex-start !important; /* 왼쪽 정렬 */
+  gap: 6px;
+  margin: 0 !important; /* 혹시 기본 margin이 있다면 제거 */
+  position: relative;
+}
+
+/* li는 기본 margin 제거 */
+.slick-dots li {
+  margin: 0 !important;
+  height: 10px;
+}
+
+/* 버튼의 디폴트 크기/스타일을 없애,
+     pseudo-element 크기에 맞춰지도록 함 */
+.slick-dots li button {
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  outline: none !important;
+}
+
+/* 비활성 dot (기본) */
+.slick-dots li button:before {
+  content: "" !important;
+  display: block !important;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: #cccccc;
+}
+
+/* 활성 dot */
+.slick-dots li.slick-active button:before {
+  background-color: #458ef6 !important;
+  width: 20px;
+  height: 10px;
+}
+
+/* ------ 모바일 화면 (최대 768px) ------ */
+@media (max-width: 768px) {
+  .slick-dots {
+    width: fit-content;
+    gap: 4px;
+    position: absolute !important;
+    top: 0;
+    right: 20px;
+  }
+
+  .slick-dots li {
+    margin: 0 !important;
+    width: 8px;
+    height: 8px;
+  }
+
+  .slick-dots li button:before {
+    width: 8px;
+    height: 8px;
+    background-color: #cccccc;
+  }
+
+  .slick-dots li.slick-active button:before {
+    width: 8px;
+    height: 8px;
+    background-color: #458ef6 !important;
+  }
+}

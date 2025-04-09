@@ -29,7 +29,7 @@ export default function GNB() {
 
   return (
     <>
-      <div className="fixed px-10 top-0 z-10 w-screen h-[68px] bg-[#1A1B1F] flex justify-between items-center">
+      <nav className="w-full fixed hidden 2xl:px-64 xl:px-24 lg:px-20 md:px-14 top-0 z-10 h-[68px] bg-[#1A1B1F] md:flex justify-between items-center">
         {/* 공팔리터 로고 */}
         <Link to={"/"}>
           <img
@@ -80,10 +80,7 @@ export default function GNB() {
             </Link>
           )}
         </div>
-      </div>
-
-      {/* blank */}
-      <div className="h-[68px]" />
+      </nav>
     </>
   );
 }
