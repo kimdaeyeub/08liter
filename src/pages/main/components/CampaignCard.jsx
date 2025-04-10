@@ -38,7 +38,7 @@ export default function CampaignCard({
 
   return (
     <div
-      className={`w-full aspect-square relative overflow-hidden cursor-pointer`}
+      className={`w-full aspect-[16/11] relative overflow-hidden cursor-pointer`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => {
@@ -58,7 +58,7 @@ export default function CampaignCard({
 
       <div className="absolute top-[16px] left-[16px] flex gap-[10px]">
         {/* 캠페인 태그 */}
-        <CampaignTag text={campaignType == "A" ? "미션 캠페인" : ""} />
+        {/* <CampaignTag text={campaignType == "A" ? "미션 캠페인" : ""} /> */}
 
         {/* 적립 리터 */}
         {/* {rewardLiter && <RewardLiter liter={rewardLiter} />} */}
@@ -89,7 +89,9 @@ export default function CampaignCard({
       <div className="absolute bottom-0 left-0 p-[28px] flex gap-10 justify-between w-full bg-gradient-to-t from-[#222222]">
         <div className="flex flex-col justify-end">
           <span className="font-bold text-white text-lg mb-[10px]">{tag}</span>
-          <span className="font-medium text-white text-sm">{content}</span>
+          <span className="font-medium text-white text-sm lg:line-clamp-3 sm:line-clamp-2 line-clamp-3">
+            {content}
+          </span>
         </div>
         <div className="flex flex-col items-end justify-end">
           <span className="font-medium text-lg text-white line-through opacity-50">
