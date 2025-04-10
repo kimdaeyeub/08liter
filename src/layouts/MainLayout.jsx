@@ -7,7 +7,9 @@ const MainLayout = () => {
   return (
     <div>
       <GNB />
-      <Outlet />
+      <div className="w-full md:mt-[68px] min-h-screen">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

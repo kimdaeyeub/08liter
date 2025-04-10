@@ -4,7 +4,7 @@ import MainPage from "./pages/main/page";
 import AuthLayout from "./layouts/AuthLayout";
 import SigninPage from "./pages/signin/page";
 import SignupPage from "./pages/signup/page";
-
+import MypageReviewSubmit from "./pages/mypage/review/submit/page";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <MainPage />,
+      },
+      {
+        path: "mypage/review/submit",
+        element: <MypageReviewSubmit />,
       },
     ],
   },

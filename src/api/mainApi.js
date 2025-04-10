@@ -1,4 +1,4 @@
-import { axiosClient } from "./axiosClient";
+import { axiosClient, prodClient } from "./axiosClient";
 
 /**
  * 메인 페이지 API.
@@ -8,7 +8,7 @@ export const mainApi = {
    * 메인 페이지 데이터 조회. (메뉴 + 캠페인 리스트)
    */
   getMainData: async () => {
-    const response = await axiosClient.get("/api-v200/rest/experience/main");
+    const response = await prodClient.get("/api-v200/rest/experience/main");
     return response.data;
   },
 
@@ -17,7 +17,7 @@ export const mainApi = {
    */
   getMenuItems: async (link) => {
     const replacedLink = link.replace("$page", "1");
-    const response = await axiosClient.get(replacedLink);
+    const response = await prodClient.get(replacedLink);
     return response.data.items;
   },
 };

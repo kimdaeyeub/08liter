@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // 커스텀 dots 스타일.
 import "../styles/slick.css";
+import { Link } from "react-router";
 
 /**
  * 롤링 배너.
@@ -28,29 +29,33 @@ export default function RollingBanner() {
             title: "리뷰를 쓰고, 리워드를 받아보세요! 💰",
             description:
               "캠페인에 참여하고 리뷰를 작성해서, 현금 리워드를 받아보세요!",
+            link: "/mypage/review/submit",
           },
           {
             title: "신규 회원은 3,000원을 바로 적립해드립니다!",
             description: "SNS 연동까지 완료하면 즉시 적립금 지급!",
+            link: "/signup",
           },
           {
             title: "친구에게 추천하고 10,000원 받기!",
             description: "친구에게 공팔리터를 소개하면, 리워드 적립!",
+            link: "/",
           },
-          {
+          /*{
             title: "캠페인 타입별 수익 보기! how to us",
             description:
               "리뷰만으로 수익 창출! 어떤 캠페인이 나에게 맞을지, 확인해보세요!",
-          },
+            link: "",
+          },*/
         ].map((item, index) => (
-          <div key={index} className="w-full">
+          <Link to={item.link} key={index} className="w-full">
             <h3 className="block font-bold text-[26px] md:text-[38px] mt-4 md:mt-0 text-[#1B1B1B] break-keep">
               {item.title}
             </h3>
             <span className="block font-medium text-[12px] md:text-[24px] text-[#1B1B1B]">
               {item.description}
             </span>
-          </div>
+          </Link>
         ))}
       </Slider>
     </div>
