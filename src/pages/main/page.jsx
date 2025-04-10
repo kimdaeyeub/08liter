@@ -48,8 +48,6 @@ export default function Main() {
     fetchMainData();
   }, []);
 
-  console.log(mainData);
-
   return (
     <main className="w-full md:mt-[78px] mt-8">
       {/* 상단 배너 (롤링) */}
