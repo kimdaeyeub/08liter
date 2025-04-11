@@ -30,9 +30,10 @@ const categoryMenus = [
       { name: "개인정보처리방침", path: "/mypage/privacy" },
     ],
   },
+  // 로그아웃의 경우 별도의 수정 필요(예를들어, 확인 모달을 띄우는 버튼으로 변경한다든지)
   {
     title: "관리",
-    items: [{ name: "로그아웃", path: "/mypage/logout" }],
+    items: [{ name: "로그아웃", path: "#" }],
   },
 ];
 
