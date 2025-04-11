@@ -5,6 +5,9 @@ import AuthLayout from "./layouts/AuthLayout";
 import SigninPage from "./pages/signin/page";
 import SignupPage from "./pages/signup/page";
 import MypageReviewSubmit from "./pages/mypage/review/submit/page";
+import LiterPage from "./pages/mypage/liter/page";
+import MyPageLayout from "./layouts/MyPageLayout";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +34,16 @@ const router = createBrowserRouter([
       {
         path: "signup",
         element: <SignupPage />,
+      },
+    ],
+  },
+  {
+    path: "/mypage/",
+    element: <MyPageLayout />,
+    children: [
+      {
+        path: "liter",
+        element: <LiterPage />,
       },
     ],
   },
