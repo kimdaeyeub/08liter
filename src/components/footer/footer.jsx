@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="w-full hidden px-10 border-t border-[#CCCCCC] md:flex py-[38px]">
+    <div className="w-full hidden px-10 mt-20 border-t border-[#CCCCCC] md:flex py-[38px]">
       {/* 공팔리터 로고 */}
       <img src="/icons/footer_logo.svg" alt="로고" />
 
